@@ -1,0 +1,327 @@
+.home {
+    .posts {
+        margin-top: 50px;
+        display: flex;
+        flex-direction: column;
+        gap: 150px;
+
+        .post {
+            display: flex;
+            gap: 100px;
+            flex-direction: column;
+            /* Display posts in a single column on small screens */
+
+            &:nth-child(2n + 1) {
+                flex-direction: column;
+                /* Override the alternating row direction */
+            }
+
+            .img {
+                flex: 2;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 100%;
+                    background-color: lightgreen;
+                    /* Use your actual color variable */
+                    position: absolute;
+                    top: 20px;
+                    left: -20px;
+                    z-index: -1;
+                }
+
+                img {
+                    width: 100%;
+                    max-height: 400px;
+                    object-fit: cover;
+                }
+            }
+
+            .content {
+                flex: 3;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                
+                h1 {
+                    font-size: 50px;
+                    /* Reduce font size on small screens */
+                }
+
+                p {
+                    font-size: 30px;
+                    /* Reduce font size on small screens */
+                }
+
+                button {
+                    width: max-content;
+                    padding: 10px 20px;
+                    border: none;
+                    cursor: pointer;
+                    background-color: white;
+                    border: 1px solid teal;
+                    color: teal;
+                    align-items: center;
+
+                    &:hover {
+                        border: 1px solid white;
+                        background-color: lightgreen;
+                        /* Use your actual color variable */
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+
+    /* Media queries for responsive design */
+    @media (min-width: 768px) {
+        .posts {
+            .post {
+                flex-direction: row;
+                /* Display posts in a row on larger screens */
+
+                &:nth-child(2n + 1) {
+                    flex-direction: row-reverse;
+                    /* Alternate row direction on larger screens */
+                }
+            }
+        }
+    }
+}
+
+.design-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+}
+
+.carousel {
+    width: 50%;
+    padding-right: 40px;
+}
+
+.slick-slide img {
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    width: 50%;
+    padding-left: 40px;
+}
+
+.content h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.content p {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+.content h2 {
+    font-size: 50px; /* Adjust font size as needed */
+    color: teal; /* Match the color with the rest of the web design */
+}
+
+.content button {
+    padding: 15px 30px; /* Increase button size */
+    background-color: teal; /* Change button color */
+    color: white; /* Text color */
+}
+
+.popular-services span {
+    font-weight: bold;
+    font-size: 25px;
+    color: blue; /* Change "Popular" color to blue */
+}
+.popular-services  ul li {
+    font-size: 20px;
+    
+}
+
+
+
+.content button {
+    padding: 15px 30px; /* Increase button size */
+    background-color: teal; /* Change button color */
+    color: white; /* Text color */
+}
+
+.popular-services span {
+    font-weight: bold;
+    color: blue; /* Change "Popular" color to blue */
+}
+
+
+.popular-services {
+    margin-top: 40px;
+}
+
+.popular-services span {
+    font-weight: bold;
+}
+
+.popular-services ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+.popular-services li {
+    margin-bottom: 5px;
+}
+
+.button-18 {
+    align-items: center;
+    background-color: #0080ff;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: #ffffff;
+    cursor: pointer;
+    display: inline-flex;
+   
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 20px;
+    max-width: 480px;
+    min-height: 40px;
+    min-width: 0px;
+    overflow: hidden;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    touch-action: manipulation;
+    
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+}
+
+.button-18:hover,
+.button-18:focus {
+    background-color: #2a86ff;
+    color: #ffffff;
+}
+
+.button-18:active {
+    background: #0080ff;
+    ;
+    color: rgb(255, 255, 255, .7);
+}
+.design-section {
+    display: flex;
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+  }
+  
+  .carousel {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+  
+  .content {
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+  
+  /* Media query for larger screens */
+  @media (min-width: 768px) {
+    .design-section {
+      flex-direction: row; /* Display items in a row on larger screens */
+      justify-content: space-between;
+    }
+  
+    .carousel {
+      width: 50%;
+      padding-right: 40px;
+      margin-bottom: 0;
+    }
+  
+    .content {
+      width: 50%;
+      padding-left: 40px;
+      text-align: left;
+    }
+  }
+
+  /* Add this CSS code to your Home.css file */
+/* Add this CSS code to your Home.css file */
+
+
+  
+  @media (max-width: 767px) {
+    .post .content button {
+      /* Adjust button position only on small screens */
+      margin-top: 20px; /* Adjust the margin as needed */
+    }
+    .post .content {
+        /* Existing CSS styles */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align items horizontally */
+      }
+  }
+  /* DesignSection.module.css */
+
+/* Base styles */
+.responsiveSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0077cc; /* Replace with your preferred color */
+  color: white;
+  padding: 0px;
+  text-align: center;
+  margin: 100px;
+  border-radius: 25px;
+}
+
+.sectionContent {
+  margin: 20px;
+}
+
+.browseButton {
+  background-color: #333; /* Replace with your preferred button color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Responsive styles for small screens */
+@media (max-width: 767px) {
+  .responsiveSection {
+    flex-direction: column;
+  }
+}
+
+/* Responsive styles for large screens */
+@media (min-width: 768px) {
+  .responsiveSection {
+    flex-direction: row;
+  }
+}
+
+.responsiveSection img{
+    width: 400px;
+    height: 300px;
+    margin-top: -20px;
+    
+}
